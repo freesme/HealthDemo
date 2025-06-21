@@ -225,36 +225,7 @@ struct StepsContent: View {
     }
 }
 
-// MARK: - 权限内容
-struct PermissionsContent: View {
-    let healthKitAvailable: Bool
-    
-    var body: some View {
-        VStack(spacing: 16) {
-            if !healthKitAvailable {
-                HealthKitUnavailableView()
-            } else {
-                VStack(spacing: 12) {
-                    Image(systemName: "lock.shield.fill")
-                        .font(.system(size: 40))
-                        .foregroundColor(.orange)
-                    
-                    Text("权限管理功能")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                    
-                    Text("即将推出：健康数据访问权限")
-                        .font(.body)
-                        .foregroundColor(.secondary)
-                        .multilineTextAlignment(.center)
-                }
-                .padding()
-                .background(Color(.systemGray6))
-                .cornerRadius(12)
-            }
-        }
-    }
-}
+
 
 // MARK: - 样本数据内容
 struct SamplesContent: View {
